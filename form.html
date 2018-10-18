@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data" id="form">
+        <input type="file" name="file">
+        <input type="submit">
+    </form>
+</body>
+
+<script>
+$("form").submit(function(evt){
+$("body").append('<p class="loading">Loading</p>');
+      evt.preventDefault();
+      var formData = new FormData($(this)[0]);
+   $.ajax({
+       url: '',
+       type: 'POST',
+       data: formData,
+       async: false,
+       cache: false,
+       contentType: false,
+       enctype: 'multipart/form-data',
+       processData: false,
+   }).done(function(response){
+    $.each(JSON.parse(response), function( index, value ) {
+        $("body").append('<p><b>'+ index +': </b>'+ value +'</p>');
+    });
+
+
+
+
+
+   });
+
+ });
+
+
+</script>
+</html>
