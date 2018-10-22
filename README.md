@@ -47,7 +47,7 @@ pip3 install keras
 
 #### Install the special library for ImageAI
  ```sh
-pip3 install https://github.com/OlafenwaMoses/ImageAI/raw/master/dist/imageai-1.0.2-py3-none-any.whl
+pip3 install https://github.com/OlafenwaMoses/ImageAI/blob/master/dist/imageai-2.0.2-py3-none-any.whl
 ```
 
 
